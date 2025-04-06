@@ -1,3 +1,4 @@
+# MY BASIC LOGIC
 class Solution:
     def mergeAlternately(self, word1: str, word2: str) -> str:
         result = []
@@ -21,5 +22,11 @@ class Solution:
         return ''.join(result)
 
 
-
+# AFTER OPTIMISING THE CODE
+class Solution:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        merged = [a+b for a,b in zip(word1,word2)]
+        merged.append(word1[len(word2):] or word2[len(word1):])
+        return ''.join(merged)
+        
         
