@@ -10,4 +10,8 @@ class Solution:
                 result.append(False)
         return result
 
-        
+#After optimise the code 
+class Solution:
+    def kidsWithCandies(self, candies, extraCandies):
+        maximum = max(candies)
+        return [candy + extraCandies >= maximum for candy in candies]
